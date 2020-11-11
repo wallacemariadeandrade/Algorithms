@@ -19,6 +19,7 @@ namespace Algorithms.SortingAlgorithms.BubbleSort
     {
         public int[] Sort(int[] array)
         {
+            var swapped = false;
             // Maximum number of iterations is n*n
         	for(int n=0; n<array.Length*array.Length; n++)
         	{
@@ -26,9 +27,14 @@ namespace Algorithms.SortingAlgorithms.BubbleSort
         		for(int i=0; i<array.Length-1; i++)
         		{
         			if(array[i] == array[i+1]) continue;
-        			if(array[i] < array[i+1]) PerformSwap(i, i+1, array);
-        			if(FinishedSorting(array)) return array;
+        			if(array[i] < array[i+1])
+                    {
+                        PerformSwap(i, i+1, array);
+                        swapped = true;
+                    }
         		}
+                if(!swapped) return array;
+                swapped = false;
         	}
         	return array;
         }
@@ -39,16 +45,6 @@ namespace Algorithms.SortingAlgorithms.BubbleSort
         	var item2 = array[pos2];
         	array[pos1] = item2;
         	array[pos2] = item1;
-        }
-        
-        private bool FinishedSorting(int[] array)
-        {
-        	for(int i=0; i<array.Length-1; i++)
-        	{
-        	    if(array[i] >= array[i+1]) continue;
-        	    else return false;
-        	}
-        	return true;
         }
     }
 }
