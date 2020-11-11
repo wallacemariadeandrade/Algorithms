@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Algorithms.SortingAlgorithms
+namespace Algorithms.SortingAlgorithms.BubbleSort
 {
     public class GenericBubbleSort : ISorter
     {

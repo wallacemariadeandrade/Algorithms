@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using Algorithms.SortingAlgorithms;
+using Algorithms.SortingAlgorithms.BubbleSort;
 
 namespace Xunit
 {

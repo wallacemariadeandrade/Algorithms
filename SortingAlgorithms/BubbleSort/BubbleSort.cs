@@ -1,4 +1,4 @@
-namespace Algorithms.SortingAlgorithms
+namespace Algorithms.SortingAlgorithms.BubbleSort
 {
     /// <summary>
     /// From Wikipedia (https://en.wikipedia.org/wiki/Bubble_sort):
