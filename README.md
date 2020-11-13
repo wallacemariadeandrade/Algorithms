@@ -1,3 +1,5 @@
+![.NET Core](https://github.com/wallacemariadeandrade/Algorithms/workflows/.NET%20Core/badge.svg)
+
 # Algorithms
 
 A project to study and implement interesting kind of algorithms, like sorting algorithms, cryptographic algorithms, shuffle algorithms, random numbers generators algorithms and so on. :sunglasses:
