@@ -27,7 +27,7 @@ namespace Algorithms.SortingAlgorithms.BubbleSort
         		for(int i=0; i<array.Length-1; i++)
         		{
         			if(array[i] == array[i+1]) continue;
-        			if(array[i] < array[i+1])
+        			if(array[i] > array[i+1])
                     {
                         PerformSwap(i, i+1, array);
                         swapped = true;

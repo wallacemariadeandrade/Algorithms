@@ -12,7 +12,7 @@ namespace Xunit
             var bubbleSort = new BubbleSort();
             var intArray = new int[] { 2, 1, 1, 10, 25, 43 };
             var sortedArray = bubbleSort.Sort(intArray);
-            Assert.Equal(new int[]{ 43, 25, 10, 2, 1, 1 }, sortedArray);
+            Assert.Equal(new int[]{ 1, 1, 2, 10, 25, 43 }, sortedArray);
         }     
 
         [Fact]

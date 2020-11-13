@@ -5,7 +5,7 @@ namespace Algorithms.SortingAlgorithms.BubbleSort
 {
     public class GenericBubbleSort : ISorter
     {
-        public IEnumerable<T> Sort<T>(IEnumerable<T> set, IComparer<T> comparer, Order order = Order.Descending)
+        public IEnumerable<T> Sort<T>(IEnumerable<T> set, IComparer<T> comparer, Order order = Order.Ascending)
         {
             var innerArray = set.ToArray();
             var swapped = false;
@@ -15,16 +15,16 @@ namespace Algorithms.SortingAlgorithms.BubbleSort
         		for(int i=0; i<innerArray.Length-1; i++)
         		{
                     if(comparer.Compare(innerArray[i], innerArray[i+1]) == 0) continue;
-                    if(comparer.Compare(innerArray[i], innerArray[i+1]) < 0)
+                    if(comparer.Compare(innerArray[i], innerArray[i+1]) > 0)
                     {
                         PerformSwap(i, i+1, innerArray);
                         swapped = true;
                     }  			
         		}
-                if(!swapped) return order == Order.Descending ? innerArray : innerArray.Reverse();
+                if(!swapped) return order == Order.Ascending ? innerArray : innerArray.Reverse();
                 swapped = false;
             }
-            return order == Order.Descending ? innerArray : innerArray.Reverse();
+            return order == Order.Ascending ? innerArray : innerArray.Reverse();
         }
 
         private void PerformSwap<T>(int pos1, int pos2, T[] array)
