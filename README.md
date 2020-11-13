@@ -1,3 +1,5 @@
+[![GitHub license](https://img.shields.io/github/license/wallacemariadeandrade/Algorithms)](https://github.com/wallacemariadeandrade/Algorithms/blob/master/LICENSE)
+[![GitHub issues](https://img.shields.io/github/issues/wallacemariadeandrade/Algorithms)](https://github.com/wallacemariadeandrade/Algorithms/issues)
 ![.NET Core](https://github.com/wallacemariadeandrade/Algorithms/workflows/.NET%20Core/badge.svg)
 
 # Algorithms
