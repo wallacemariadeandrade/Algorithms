@@ -1,3 +1,5 @@
+using static Algorithms.CommonOperationsOverArray;
+
 namespace Algorithms.SortingAlgorithms.BubbleSort
 {
     /// <summary>
@@ -29,7 +31,7 @@ namespace Algorithms.SortingAlgorithms.BubbleSort
         			if(array[i] == array[i+1]) continue;
         			if(array[i] > array[i+1])
                     {
-                        PerformSwap(i, i+1, array);
+                        PerformSwapBetween<int>(i, i+1, array);
                         swapped = true;
                     }
         		}
@@ -37,14 +39,6 @@ namespace Algorithms.SortingAlgorithms.BubbleSort
                 swapped = false;
         	}
         	return array;
-        }
-
-        private void PerformSwap(int pos1, int pos2, int[] array)
-        {
-        	var item1 = array[pos1];
-        	var item2 = array[pos2];
-        	array[pos1] = item2;
-        	array[pos2] = item1;
         }
     }
 }

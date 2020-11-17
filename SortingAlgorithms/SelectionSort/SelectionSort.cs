@@ -1,3 +1,5 @@
+using static Algorithms.CommonOperationsOverArray;
+
 namespace Algorithms.SortingAlgorithms.SelectionSort
 {
     public class SelectionSort
@@ -7,7 +9,7 @@ namespace Algorithms.SortingAlgorithms.SelectionSort
             for(int i=0; i<array.Length; i++)
             {
                 var indexOfMinor = FindIndexOfMinorNumberIn(array, i);          
-                PerformSwap(i, indexOfMinor, array);
+                PerformSwapBetween<int>(i, indexOfMinor, array);
             }
             return array;
         }
@@ -28,14 +30,6 @@ namespace Algorithms.SortingAlgorithms.SelectionSort
                 }
             }
             return indexOfMinor;
-        }
-
-        private void PerformSwap(int pos1, int pos2, int[] array)
-        {
-        	var item1 = array[pos1];
-        	var item2 = array[pos2];
-        	array[pos1] = item2;
-        	array[pos2] = item1;
         }
     }
 }

@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using static Algorithms.CommonOperationsOverArray;
 
 namespace Algorithms.SortingAlgorithms.BubbleSort
 {
@@ -17,7 +18,7 @@ namespace Algorithms.SortingAlgorithms.BubbleSort
                     if(comparer.Compare(innerArray[i], innerArray[i+1]) == 0) continue;
                     if(comparer.Compare(innerArray[i], innerArray[i+1]) > 0)
                     {
-                        PerformSwap(i, i+1, innerArray);
+                        PerformSwapBetween<T>(i, i+1, innerArray);
                         swapped = true;
                     }  			
         		}
@@ -25,14 +26,6 @@ namespace Algorithms.SortingAlgorithms.BubbleSort
                 swapped = false;
             }
             return order == Order.Ascending ? innerArray : innerArray.Reverse();
-        }
-
-        private void PerformSwap<T>(int pos1, int pos2, T[] array)
-        {
-            var item1 = array[pos1];
-        	var item2 = array[pos2];
-        	array[pos1] = item2;
-        	array[pos2] = item1;
         }
     }
 }
